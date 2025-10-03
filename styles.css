@@ -55,13 +55,13 @@ font-family: 'Playfair Display', serif;
 color: #2ecc71; /* Emerald */
 }
 .cta-button {
-  display: block; /* Changed from inline-block to block for centering */
+  display: inline-block; /* Fits button width to text */
   background: #2ecc71; /* Emerald */
   color: #fff;
   padding: 0.5rem 1rem;
   text-decoration: none;
   border-radius: 5px;
-  margin: 1rem auto; /* Auto margins for centering */
+  margin: 1rem auto; /* Keeps centering */
 }
 body.light-mode .cta-button {
 color: #fff;
@@ -71,11 +71,11 @@ margin: 2rem 0;
 text-align: center;
 }
 .video-container {
-position: relative;
-width: 100%;
-max-width: 360px; /* Base width for vertical video */
-margin: 0 auto;
-padding-bottom: 177.78%; /* 9:16 aspect ratio (16/9 = 1.777, so 1/1.777 ≈ 56.25% but inverted for vertical) */
+  position: relative;
+  width: 100%;
+  max-width: 360px; /* Base width for vertical video */
+  margin: 0 auto;
+  padding-bottom: 56.25%; /* 9:16 aspect ratio (16/9 = 1.777, so 1/1.777 = 56.25%) */
 }
 .video-container iframe {
 position: absolute;
@@ -137,10 +137,10 @@ background: #2ecc71;
 color: #fff;
 }
 @media (max-width: 600px) {
-nav a {
-display: block;
-margin: 0.5rem 0;
-}
+  .video-container {
+    max-width: 100%; /* Full width on small screens */
+    padding-bottom: 56.25%; /* Consistent 9:16 for mobile */
+  }
 .socials a {
 display: block;
 margin: 0.5rem 0;
@@ -150,4 +150,5 @@ max-width: 100%; /* Full width on small screens */
 padding-bottom: 177.78%; /* 9:16 for mobile */
 }
 }
+
 
