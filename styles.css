@@ -160,4 +160,10 @@ body.light-mode .mode-toggle {
     display: block;
     margin: 0.5rem 0;
   }
+
+  .video-container {
+    max-width: 100%; /* Full width on small screens */
+    padding-bottom: 177.78%; /* 9:16 for mobile */
+  }
 }
+
