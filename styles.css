@@ -73,17 +73,38 @@ text-align: center;
 .video-container {
   position: relative;
   width: 100%;
-  max-width: 360px; /* Base width for vertical video */
+  max-width: 560px; /* Base width for widescreen (16:9) */
   margin: 0 auto;
-  padding-bottom: 56.25%; /* 9:16 aspect ratio (16/9 = 1.777, so 1/1.777 = 56.25%) */
+  padding-bottom: 56.25%; /* 16:9 aspect ratio (9/16 = 0.5625) */
 }
-.video-container iframe {
-position: absolute;
-top: 0;
-left: 0;
-width: 100%;
-height: 100%;
+
+.video-container-vertical {
+  position: relative;
+  width: 100%;
+  max-width: 360px; /* Base width for vertical (9:16) */
+  margin: 0 auto;
+  padding-bottom: 177.78%; /* 9:16 aspect ratio (16/9 = 1.7778) */
 }
+
+.video-container iframe,
+.video-container-vertical iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+@media (max-width: 600px) {
+  .video-container {
+    max-width: 100%; /* Full width on small screens */
+    padding-bottom: 56.25%; /* 16:9 for widescreen */
+  }
+
+  .video-container-vertical {
+    max-width: 100%; /* Full width on small screens */
+    padding-bottom: 177.78%; /* 9:16 for vertical */
+  }
 .shop {
 text-align: center;
 }
@@ -136,19 +157,12 @@ body.light-mode .mode-toggle {
 background: #2ecc71;
 color: #fff;
 }
-@media (max-width: 600px) {
-  .video-container {
-    max-width: 100%; /* Full width on small screens */
-    padding-bottom: 56.25%; /* Consistent 9:16 for mobile */
-  }
+
 .socials a {
 display: block;
 margin: 0.5rem 0;
 }
-.video-container {
-max-width: 100%; /* Full width on small screens */
-padding-bottom: 177.78%; /* 9:16 for mobile */
 }
-}
+
 
 
