@@ -162,7 +162,36 @@ color: #fff;
 display: block;
 margin: 0.5rem 0;
 }
+
+.learning-hub {
+  text-align: center;
 }
+
+.course-list h4 {
+  font-family: 'Playfair Display', serif;
+  color: #2ecc71; /* Emerald */
+  margin: 1rem 0 0.5rem;
+}
+
+.course-list ul {
+  list-style: none;
+  padding: 0;
+}
+
+.course-list li {
+  margin: 0.5rem 0;
+}
+
+.course-list a {
+  color: #2ecc71; /* Emerald */
+  text-decoration: none;
+}
+
+body.light-mode .course-list a {
+  color: #2ecc71;
+}
+}
+
 
 
 
