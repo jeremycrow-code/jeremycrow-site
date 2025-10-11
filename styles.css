@@ -181,8 +181,6 @@ body.light-mode footer#socials a {
   font-weight: 700; /* Bolder for distinction */
   color: #f5e050; /* Gold for dark mode, Luciferian aesthetic */
   margin: 2rem 0 1rem; /* Extra spacing to separate from course titles */
-  padding-bottom: 0.3rem; /* Space for underline */
-  border-bottom: 2px solid #f5e050; /* Gold underline for visual distinction */
   text-transform: uppercase; /* Authoritative look */
   letter-spacing: 1px; /* Improved readability */
 }
@@ -266,4 +264,5 @@ body.light-mode .mode-toggle {
     justify-content: center; /* Ensure centering on larger screens */
   }
 }
+
 
