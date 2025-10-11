@@ -174,11 +174,26 @@ body.light-mode footer#socials a {
   text-align: center;
 }
 
+/* Category Titles for Learn Page */
 .course-list h4 {
-  font-family: 'Playfair Display', serif;
-  color: #2ecc71; /* Emerald */
-  margin: 1rem 0 0.5rem;
+  font-family: 'Playfair Display', serif; /* Retains elegant font */
+  font-size: 1.6rem; /* Larger than course titles for emphasis */
+  font-weight: 700; /* Bolder for distinction */
+  color: #f5e050; /* Gold for dark mode, Luciferian aesthetic */
+  margin: 2rem 0 1rem; /* Extra spacing to separate from course titles */
+  padding-bottom: 0.3rem; /* Space for underline */
+  border-bottom: 2px solid #f5e050; /* Gold underline for visual distinction */
+  text-transform: uppercase; /* Authoritative look */
+  letter-spacing: 1px; /* Improved readability */
 }
+
+/* Light mode adjustments for category titles */
+.light-mode .course-list h4 {
+  color: #2c3e50; /* Darker shade for contrast in light mode */
+  border-bottom: 2px solid #2c3e50; /* Matching border for light mode */
+}
+
+
 
 .course-list ul {
   list-style: none;
@@ -223,6 +238,12 @@ body.light-mode .mode-toggle {
     margin: 0.5rem 0;
   }
 
+  /* Responsive adjustments */
+@media (max-width: 600px) {
+  .course-list h4 {
+    font-size: 1.4rem; /* Slightly smaller for mobile */
+  }
+
   .socials {
     flex-direction: row;
     justify-content: center;
@@ -245,3 +266,4 @@ body.light-mode .mode-toggle {
     justify-content: center; /* Ensure centering on larger screens */
   }
 }
+
