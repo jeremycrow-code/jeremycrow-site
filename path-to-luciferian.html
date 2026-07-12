@@ -9,9 +9,11 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body class="dark-mode">
-<header>
+  <button class="mode-toggle" onclick="toggleMode()">Light/Dark</button>
+
+<header class="main-header">
   <img src="/JC-Banner.png" alt="Jeremy Crow Snakeskin Banner with NOL Sigil" class="header-image">
-  <nav>
+  <nav class="main-nav">
     <a href="/">Home</a>
     <a href="/learn.html" class="active">Learn</a>
     <a href="https://jeremycrow.storenvy.com/" target="_blank">Shop</a>
@@ -20,9 +22,12 @@
     <a href="https://novusordoluciferi.com" target="_blank">NOL Sanctum</a>
   </nav>
 </header>
+
+<div class="content-wrapper">
   <main>
     <section class="course">
       <h2>A Path to Becoming Luciferian</h2>
+      
       <h3>Summary</h3>
       <p>This course explores one possible spiritual journey from traditional religious upbringing to embracing Luciferianism, highlighting the rejection of dogmatic constraints and the pursuit of esoteric knowledge through Catholicism, Freemasonry, and Gnosticism. It invites you to explore Lucifer as a symbol of enlightenment, freedom, and self-empowerment. This particular path is based on the actual lived experience of Jeremy Crow, a prominent leader in the modern Gnostic Luciferian community and the owner of this website.</p>
       
@@ -41,7 +46,7 @@
       </article>
       
       <h3>Further Resources</h3>
-      <ul>
+      <ul class="resources-list">
         <li><a href="https://amzn.to/3INMajS" target="_blank">The Nag Hammadi Scriptures</a></li>
         <li><a href="https://amzn.to/4mObdRD" target="_blank">The Lost Keys of Freemasonry by Manly P. Hall</a></li>
         <li><a href="https://amzn.to/4gYA0kJ" target="_blank">Apotheosis by Michael W. Ford</a></li>
@@ -53,18 +58,19 @@
       <a href="https://patreon.com/novusordoluciferi" target="_blank" class="cta-button">Join NOL on Patreon</a>
     </section>
   </main>
-  
-  <footer id="socials">
-    <div class="socials">
-      <a href="https://www.youtube.com/JeremyCrow" target="_blank">YouTube</a>
-      <a href="https://discord.gg/GvjsS4C" target="_blank">Discord</a>
-      <a href="https://www.facebook.com/PrimusJeremyCrow" target="_blank">Facebook</a>
-      <a href="https://www.threads.com/@jeremycrow" target="_blank">Threads</a>
-      <a href="https://bsky.app/profile/jeremycrow.bsky.social" target="_blank">BlueSky</a>
-    </div>
-    <p>Embody the Light Bearer: <a href="https://patreon.com/novusordoluciferi" target="_blank">Join NOL on Patreon</a></p>
-    <p>© Jeremy Crow 2026</p>
-  </footer>
-  <script src="script.js"></script>
+</div>
+
+<footer id="socials" class="main-footer">
+  <div class="socials">
+    <a href="https://www.youtube.com/JeremyCrow" target="_blank">YouTube</a>
+    <a href="https://discord.gg/GvjsS4C" target="_blank">Discord</a>
+    <a href="https://www.facebook.com/PrimusJeremyCrow" target="_blank">Facebook</a>
+    <a href="https://www.threads.com/@jeremycrow" target="_blank">Threads</a>
+    <a href="https://bsky.app/profile/jeremycrow.bsky.social" target="_blank">BlueSky</a>
+  </div>
+  <p>Embody the Light Bearer: <a href="https://patreon.com/novusordoluciferi" target="_blank">Join NOL on Patreon</a></p>
+  <p>© Jeremy Crow 2026</p>
+</footer>
+<script src="script.js"></script>
 </body>
 </html>
