@@ -166,7 +166,7 @@ article p a:hover,
   border: 0;
 }
 
-/* Unified Call To Action Engine (Locked to Green Background with White Text) */
+/* Atmospheric Call To Action Engine (Crimson to Emerald Transition) */
 .cta-wrapper {
   text-align: center;
   margin: 2.5rem 0;
@@ -175,23 +175,27 @@ article p a:hover,
 .cta-button,
 a.cta-button {
   display: inline-block !important;
-  background-color: #2ea354 !important; 
+  background-color: #800000 !important; /* Rich Alchemical Crimson Baseline */
   color: #ffffff !important; 
   font-family: var(--font-sans) !important;
   font-weight: bold !important;
   text-transform: uppercase;
-  letter-spacing: 1px;
+  letter-spacing: 1.5px;
   font-size: 0.9rem;
   padding: 1rem 2.5rem !important;
   text-decoration: none !important;
-  border-radius: 4px;
-  transition: background-color 0.2s ease, transform 0.2s ease;
+  border-radius: 0px !important; /* Sharp, geometric styling fits dark academia better than rounded edges */
+  border: 1px solid #990000;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.6);
+  transition: background-color 0.4s ease, border-color 0.4s ease, transform 0.2s ease;
 }
 
 .cta-button:hover,
 a.cta-button:hover {
-  background-color: #248243 !important;
+  background-color: #004d26 !important; /* Luminous Emerald Shift on Interaction */
+  border-color: #007339;
   color: #ffffff !important;
+  transform: translateY(-2px); /* Subtle physical elevation */
 }
 
 /* Course Lists & Resource Architecture */
