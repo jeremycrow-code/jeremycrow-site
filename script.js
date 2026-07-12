@@ -1,7 +1,17 @@
 function toggleMode() {
-document.body.classList.toggle('light-mode');
-localStorage.setItem('theme', document.body.classList.contains('light-mode') ? 'light' : 'dark');
+  const isLight = document.body.classList.toggle('light-mode');
+  localStorage.setItem('theme', isLight ? 'light' : 'dark');
 }
-if (localStorage.getItem('theme') === 'light') {
-document.body.classList.add('light-mode');
-}
+
+document.addEventListener('DOMContentLoaded', () => {
+  const toggleBtn = document.getElementById('modeToggle');
+  if (toggleBtn) {
+    toggleBtn.addEventListener('click', toggleMode);
+  }
+
+  if (localStorage.getItem('theme') === 'light') {
+    document.body.classList.add('light-mode');
+  } else {
+    document.body.classList.remove('light-mode');
+  }
+});
