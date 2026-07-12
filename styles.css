@@ -36,11 +36,14 @@ body {
 }
 
 /* Global Navigation Layout */
-.global-header {
+header,
+.global-header,
+.main-header {
   background-color: var(--bg-secondary);
   border-bottom: 1px solid var(--border-color);
   padding-bottom: 1rem;
   text-align: center;
+  width: 100%;
 }
 
 .header-banner-container {
@@ -56,28 +59,37 @@ body {
   margin: 0 auto;
 }
 
-.matrix-nav {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+/* Clean, True-Centered Global Navigation Matrix */
+nav,
+.matrix-nav,
+.main-nav {
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
   flex-wrap: wrap;
   gap: 1.5rem;
   margin-top: 1rem;
   padding: 0 1rem;
+  width: 100%;
 }
 
-.matrix-nav a {
-  color: var(--text-primary);
-  text-decoration: none;
+nav a,
+.matrix-nav a,
+.main-nav a {
+  color: var(--text-primary) !important;
+  text-decoration: none !important;
   font-size: 0.95rem;
   font-weight: bold;
   letter-spacing: 0.5px;
   transition: color 0.2s ease;
 }
 
+nav a:hover,
 .matrix-nav a:hover,
+.main-nav a:hover,
+nav a.active-node,
 .matrix-nav a.active-node {
-  color: var(--accent-color);
+  color: var(--accent-color) !important;
 }
 
 /* Main Content Area & Layout Wrapper */
@@ -119,21 +131,16 @@ article p {
   margin-bottom: 1.5rem;
 }
 
-body.light-mode .course p,
-body.light-mode .hero-block p,
-body.light-mode article p {
-  color: var(--text-primary);
-}
-
-article a,
-.course a {
+/* Inline Text Links inside Articles */
+article p a,
+.course p a {
   color: var(--accent-color);
   text-decoration: none;
   font-weight: 500;
 }
 
-article a:hover,
-.course a:hover {
+article p a:hover,
+.course p a:hover {
   text-decoration: underline;
 }
 
@@ -144,7 +151,7 @@ article a:hover,
   width: 100%;
   max-width: 100%;
   margin: 2rem auto;
-  padding-bottom: 56.25%; /* Perfect 16:9 widescreen scaling */
+  padding-bottom: 56.25%; /* 16:9 widescreen scaling */
   background-color: #000000;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
 }
@@ -159,29 +166,32 @@ article a:hover,
   border: 0;
 }
 
-/* Call To Action Engine */
+/* Unified Call To Action Engine (Locked to Green Background with White Text) */
 .cta-wrapper {
   text-align: center;
   margin: 2.5rem 0;
 }
 
-.cta-button {
-  display: inline-block;
-  background-color: #2ea354; /* Explicit green match for your conversion rail */
-  color: #ffffff;
-  font-family: var(--font-sans);
-  font-weight: bold;
+.cta-button,
+a.cta-button {
+  display: inline-block !important;
+  background-color: #2ea354 !important; 
+  color: #ffffff !important; 
+  font-family: var(--font-sans) !important;
+  font-weight: bold !important;
   text-transform: uppercase;
   letter-spacing: 1px;
   font-size: 0.9rem;
-  padding: 1rem 2.5rem;
-  text-decoration: none;
+  padding: 1rem 2.5rem !important;
+  text-decoration: none !important;
   border-radius: 4px;
   transition: background-color 0.2s ease, transform 0.2s ease;
 }
 
-.cta-button:hover {
-  background-color: #248243;
+.cta-button:hover,
+a.cta-button:hover {
+  background-color: #248243 !important;
+  color: #ffffff !important;
 }
 
 /* Course Lists & Resource Architecture */
@@ -227,6 +237,7 @@ article a:hover,
 }
 
 /* Footer Execution */
+footer,
 .global-footer,
 .main-footer {
   background-color: var(--bg-secondary);
@@ -234,6 +245,7 @@ article a:hover,
   padding: 3rem 1.5rem;
   text-align: center;
   margin-top: 5rem;
+  width: 100%;
 }
 
 .social-links,
@@ -303,9 +315,10 @@ article a:hover,
 
 /* Mobile Systems Tuning */
 @media (max-width: 768px) {
+  nav,
   .matrix-nav,
   .main-nav {
-    flex-direction: column;
+    flex-direction: column !important;
     gap: 0.75rem;
     padding: 0.5rem 0;
   }
