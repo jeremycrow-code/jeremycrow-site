@@ -366,3 +366,11 @@ footer,
     width: 292px;      /* Mathematically locks the 9:16 ratio perfectly relative to a 520px height */
   }
 }
+
+/* Media Block Heading Alignment */
+.media-block h3 {
+  text-align: center;
+  font-size: 1.75rem;
+  margin-top: 2rem;
+  margin-bottom: 1.5rem;
+}
