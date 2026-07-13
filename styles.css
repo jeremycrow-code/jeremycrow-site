@@ -342,9 +342,9 @@ footer,
 .video-portrait-frame {
   position: relative;
   width: 100%;
-  max-width: 380px; /* Restricts vertical blowout on desktop while allowing full scale on mobile */
+  max-width: 340px; /* Slimmed down slightly for optimal vertical desktop bounds */
   margin: 2rem auto;
-  padding-bottom: 177.78%; /* Perfect 9:16 portrait scaling */
+  padding-bottom: 177.78%; /* Perfect 9:16 portrait scaling on mobile */
   background-color: #000000;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
 }
@@ -356,4 +356,13 @@ footer,
   width: 100%;
   height: 100%;
   border: 0;
+}
+
+/* Desktop Fix: Clamps height to ensure the player fits comfortably on the screen without vertical overflow */
+@media (min-width: 769px) {
+  .video-portrait-frame {
+    padding-bottom: 0; /* Negate the percentage-based aspect box */
+    height: 520px;     /* Lock in a crisp, safe fixed height for landscape monitors */
+    width: 292px;      /* Mathematically locks the 9:16 ratio perfectly relative to a 520px height */
+  }
 }
